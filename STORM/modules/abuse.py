@@ -1,6 +1,6 @@
 #MIT License
 
-#Copyright (c) 2024 ᴋᴜɴᴀʟ [AFK]
+#Copyright (c) 2024 sᴍᴀᴜɢ
 
 #Permission is hereby granted, free of charge, to any person obtaining a copy
 #of this software and associated documentation files (the "Software"), to deal
@@ -97,11 +97,11 @@ async def raid(e):
 
         try:
             if uid in DEV:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀᴜᴛʜᴏʀ ʙᴏᴛ ᴏᴡɴᴇʀ🍷 ")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ʙᴏᴛ ᴏᴡɴᴇʀ")
             elif uid == OWNER_ID:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ 🤖")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ")
             elif uid in SUDO_USERS:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ 🫂")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ")
             else:
                 first_name = entity.first_name
                 counter = int(xraid[1])
@@ -162,11 +162,11 @@ async def rraid(e):
         try:
             user_id = entity.id
             if user_id in DEV:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀᴜᴛʜᴏʀ ʙᴏᴛ ᴏᴡɴᴇʀ 🍷 ")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ʙᴏᴛ ᴏᴡɴᴇʀ")
             elif user_id == OWNER_ID:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ 🤖")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ")
             elif user_id in SUDO_USERS:
-                await e.reply("𝘕ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ 🫂")
+                await e.reply("𝘕ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ")
             else:
                 global REPLY_RAID
                 check = f"{user_id}_{e.chat_id}"
@@ -231,11 +231,11 @@ async def hraid(e):
 
         try:
             if uid in DEV:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀᴜᴛʜᴏʀ ʙᴏᴛ ᴏᴡɴᴇʀ🍷 ")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ʙᴏᴛ ᴏᴡɴᴇʀ")
             elif uid == OWNER_ID:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ 🤖")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ")
             elif uid in SUDO_USERS:
-                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ 🫂")
+                await e.reply("ɴᴏᴘᴇ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ")
             else:
                 first_name = entity.first_name
                 counter = int(xraid[1])
@@ -358,7 +358,7 @@ async def spam(event: events):
 async def pspam(event):
     if event.sender_id in SUDO_USERS:
         if event.chat_id in GROUP:
-            await event.reply("» ꜱʀʏ, ᴛʜɪꜱ ɢʀᴏᴜᴘ ɪꜱ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ʙʏ ꜱᴛᴏʀᴍ 🛡️")
+            await event.reply("» ꜱʀʏ, ᴛʜɪꜱ ɢʀᴏᴜᴘ ɪꜱ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ʙʏ sᴍᴀᴜɢ 🛡️")
         else:
             try:
                 counter = int(event.text.split(" ", 2)[1])
@@ -385,7 +385,7 @@ async def pspam(event):
 async def hang(e):
     if e.sender_id in SUDO_USERS:
         if e.chat_id in GROUP:
-            await e.reply("» ꜱʀʏ, ᴛʜɪꜱ ɢʀᴏᴜᴘ ɪꜱ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ʙʏ ꜱᴛᴏʀᴍ 🛡️")
+            await e.reply("» ꜱʀʏ, ᴛʜɪꜱ ɢʀᴏᴜᴘ ɪꜱ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ʙʏ sᴍᴀᴜɢ 🛡️")
         else:
             try:
                 counter = int(e.text.split(" ", 2)[1])
