@@ -1,51 +1,21 @@
-#MIT License
-
-#Copyright (c) 2024 ᴋᴜɴᴀʟ [AFK]
-
-#Permission is hereby granted, free of charge, to any person obtaining a copy
-#of this software and associated documentation files (the "Software"), to deal
-#in the Software without restriction, including without limitation the rights
-#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-#copies of the Software, and to permit persons to whom the Software is
-#furnished to do so, subject to the following conditions:
-
-#The above copyright notice and this permission notice shall be included in all
-#copies or substantial portions of the Software.
-
-#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-#SOFTWARE.
-
 from telethon import events, Button
 
 from config import X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, SUDO_USERS, CMD_HNDLR as hl
 
 
-HELP_STRING = f"""
-✨ **ʙᴏᴛ ʜᴇʟᴘ** ✨
+HELP_STRING = f"★ 𝗦𝗠𝗔𝗨𝗚 𝗛𝗘𝗟𝗣 𝗠𝗘𝗡𝗨 ★\n\n» **ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴꜱ ꜰᴏʀ ʜᴇʟᴘ**\n» **ᴅᴇᴠᴇʟᴏᴘᴇʀ: @smaugxd**"
 
-**[ꜱᴛᴏʀᴍ ꜱᴘᴀᴍ ʙᴏᴛ](https://t.me/Kexx_XD) ʜᴇʟᴘ ᴍᴇɴᴜ** 🥀
-
-**ʜᴇʟᴘ ᴍᴇɴᴜ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [ꜱᴛᴏʀᴍ](https://github.com/VARC9210/STORM)** ✨
-
-**ᴄʜᴀɴɴᴇʟ: [ꜱᴛᴏʀᴍ ᴛᴇᴄʜ 🇮🇳](https://t.me/STORM_TECHH)**
-**ꜱᴜᴘᴘᴏʀᴛ: [ꜱᴛᴏʀᴍ ᴄʜᴀᴛᴢ 🇮🇳](https://t.me/STORM_CHATZ)**
-"""
 HELP_BUTTON = [
     [
       Button.inline("• ꜱᴘᴀᴍ •", data="spam"),
       Button.inline("• ʀᴀɪᴅ •", data="raid")
     ],
     [
-      Button.inline("• ᴇxᴛʀᴀꜱ •", data="extra"),
-      Button.inline("• ᴏᴡɴᴇʀ •", data="owner")
+      Button.inline("• ᴇxᴛʀᴀ •", data="extra")
     ],
     [
-      Button.url("• ꜱᴜᴘᴘᴏʀᴛ •", "https://t.me/STORM_CHATZ")
+      Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/Bots_x_Hub"),
+      Button.url("• ɢʀᴏᴜᴘ •", "https://t.me/Alice_x_support")
     ]
   ]
 
@@ -64,148 +34,84 @@ async def help(event):
     if event.sender_id in SUDO_USERS:
         try:
           await event.client.send_file(event.chat_id,
-              "https://graph.org/file/f51fa8ff3d2c9fc8ea762.mp4",
+              "https://te.legra.ph/file/07d39b85c6cea32f15259.jpg",
               caption=HELP_STRING,
               buttons=HELP_BUTTON
               )
         except Exception as e:
-            await event.client.send_message(event.chat_id, f"ᴀɴ ᴇxᴄᴇᴘᴛɪᴏɴ ᴏᴄᴄᴜʀᴇᴅ!\n\n**ᴇʀʀᴏʀ:** {str(e)}")
+            await event.client.send_message(event.chat_id, f"An Exception Occured!\n\n**ERROR:** {str(e)}")
+
 
 extra_msg = f"""
-**» ᴇ​🇽​ᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ⦂**
+**» ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ:**
 
- ˣ ᴄʜᴇᴄᴋ ᴘɪɴɢ
+𝗨𝘀𝗲𝗿𝗕𝗼𝘁: **ᴜꜱᴇʀʙᴏᴛ ᴄᴍᴅꜱ**
+  1) {hl}ping 
+  2) {hl}reboot
+  3) {hl}sudo <reply to user>  --> Owner Cmd
+  4) {hl}logs --> Owner Cmd
 
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ᴘɪɴɢ
+𝗘𝗰𝗵𝗼: **ᴛᴏ ᴀᴄᴛɪᴠᴇ ᴇᴄʜᴏ ᴏɴ ᴀɴʏ ᴜꜱᴇʀ**
+  1) {hl}echo <reply to user>
+  2) {hl}rmecho <reply to user>
 
- ˣ ʀᴇꜱᴛᴀʀᴛ ʙᴏᴛ ɪᴛ ᴡɪʟʟ ᴛᴀᴋᴇ 5 ᴍɪɴ
+𝗟𝗲𝗮𝘃𝗲: **ᴛᴏ ʟᴇᴀᴠᴇ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ**
+  1) {hl}leave <group/chat id>
+  2) {hl}leave : Type in the Group bot will auto leave that group
 
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ʀᴇꜱᴛᴀʀᴛ
 
- ˣ ᴛᴏ ᴀᴄᴛɪᴠᴇ ᴇᴄʜᴏ ᴏɴ ᴀɴʏ ᴜꜱᴇʀ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ᴇᴄʜᴏ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ʀᴍᴇᴄʜᴏ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
- ˣ ᴛᴏ ʟᴇᴀᴠᴇ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ʟᴇᴀᴠᴇ (ɢʀᴏᴜᴘ/ᴄʜᴀᴛ ɪᴅ)
-🔸 {hl}ʟᴇᴀᴠᴇ (ʏᴘᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ʙᴏᴛ ᴡɪʟʟ ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ ᴛʜᴀᴛ ɢʀᴏᴜᴘ)
-
- ˣ ꜱᴘᴀᴍꜱ ʜᴀɴɢɪɴɢ ᴍᴇꜱꜱᴀɢᴇ ꜰᴏʀ ɢɪᴠᴇɴ ᴄᴏᴜɴᴛᴇʀ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ʜᴀɴɢ (ᴄᴏᴜɴᴛᴇʀ)
-
- ˣ ꜱᴇɴᴅꜱ ᴇᴍᴏᴊɪ ᴡɪᴛʜ ᴛʜᴇ ɢɪᴠᴇ ᴄᴏᴜɴᴛᴇʀ ᴏɴ ᴜꜱᴇʀ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ᴇᴍᴏᴊɪ (ᴄᴏᴜɴᴛᴇʀ) (ᴜꜱᴇʀɴᴀᴍᴇ)
-🔸 {hl}ᴇᴍᴏᴊɪ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
- ˣ ʟᴏᴠᴇ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ʟᴏᴠᴇʀᴀɪᴅ (ᴄᴏᴜɴᴛᴇʀ) (ᴜꜱᴇʀɴᴀᴍᴇ)
-🔸 {hl}ʟᴏᴠᴇʀᴀɪᴅ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
- ˣ ꜰʟɪʀᴛꜱ ᴡɪᴛʜ ᴛʜᴇ ɢɪᴠᴇ ᴄᴏᴜɴᴛᴇʀ ᴏɴ ᴜꜱᴇʀ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ꜰʟɪʀᴛ (ᴄᴏᴜɴᴛᴇʀ) (ᴜꜱᴇʀɴᴀᴍᴇ)
-🔸 {hl}ꜰʟɪʀᴛ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
- ˣ ꜱʜᴀʏᴀʀɪ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ꜱʀᴀɪᴅ (ᴄᴏᴜɴᴛᴇʀ) (ᴜꜱᴇʀɴᴀᴍᴇ)
-🔸 {hl}ꜱʀᴀɪᴅ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ) 
-
-**© @KKEX_XD**
+**© @smaugxd**
 """
 
-
-owner_msg = f"""
-**» ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ⦂**
-
- ˣ ꜱᴜᴅᴏ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ᴀᴅᴅꜱᴜᴅᴏ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
-**© @KKEX_XD**
-"""      
-          
+                 
 raid_msg = f"""
 **» ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅꜱ:**
 
- ˣ ꜱᴛᴀʀᴛ ᴛʜᴇ ʀᴀɪᴅ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+𝗥𝗮𝗶𝗱: **ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴀɪᴅ ᴏɴ ᴀɴʏ ɪɴᴅɪᴠɪᴅᴜᴀʟ ᴜꜱᴇʀ ꜰᴏʀ ɢɪᴠᴇɴ ʀᴀɴɢᴇ.**
+  1) {hl}raid <count> <username>
+  2) {hl}raid <count> <reply to user>
 
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ʀᴀɪᴅ (ᴄᴏᴜɴᴛꜱ) (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ʀᴀɪᴅ (ᴄᴏᴜɴᴛꜱ) (ᴜꜱᴇʀɴᴀᴍᴇ)
+𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱: **ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ.**
+  1) {hl}rraid <replying to user>
+  2) {hl}rraid <username>
 
- ˣ ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀᴛ.
+𝗗𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱: **ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ.**
+  1) {hl}drraid <replying to user>
+  2) {hl}drraid <username>
 
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ʀʀᴀɪᴅ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ʀʀᴀɪᴅ (ᴜꜱᴇʀɴᴀᴍᴇ)
+𝐌𝐑𝐚𝐢𝐝: **ʟᴏᴠᴇ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ.**
+  1) {hl}mraid <count> <username>
+  2) {hl}mraid <count> <reply to user>
 
- ˣ ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ
+𝐒𝐑𝐚𝐢𝐝: **ꜱʜᴀʏᴀʀɪ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ.**
+  1) {hl}sraid <count> <username>
+  2) {hl}sraid <count> <reply to user>
 
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ᴅʀʀᴀɪᴅ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ᴅʀʀᴀɪᴅ (ᴜꜱᴇʀɴᴀᴍᴇ)
+𝐂𝐑𝐚𝐢𝐝: **ᴀʙᴄᴅ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ.**
+  1) {hl}craid <count> <username>
+  2) {hl}craid <count> <reply to user>
 
-**© @KKEX_XD**
+
+**© @smaugxd**
 """
 
 spam_msg = f"""
 **» ꜱᴘᴀᴍ ᴄᴏᴍᴍᴀɴᴅꜱ:**
 
- ˣ ꜱᴘᴀᴍꜱ ᴀ ᴍᴇꜱꜱᴀɢᴇ
+𝗦𝗽𝗮𝗺: **ꜱᴘᴀᴍꜱ ᴀ ᴍᴇꜱꜱᴀɢᴇ.**
+  1) {hl}spam <count> <message to spam> (you can reply any message if you want bot to reply that message and do spamming)
+  2) {hl}spam <count> <replying any message>
 
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ꜱᴘᴀᴍ (ᴄᴏᴜɴᴛꜱ) (ᴀᴜᴛʜᴏʀ)
-🔸 {hl}ꜱᴘᴀᴍ (ᴄᴏᴜɴᴛꜱ) (ʀᴇᴘʟʏɪɴɢ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇ)
+𝗣𝗼𝗿𝗻𝗦𝗽𝗮𝗺: **ᴘᴏʀᴍᴏɢʀᴀᴘʜʏ ꜱᴘᴀᴍ.**
+  1) {hl}pspam <count>
 
- ˣ ᴘᴏʀᴍᴏɢʀᴀᴘʜʏ ꜱᴘᴀᴍ
+𝗛𝗮𝗻𝗴: **ꜱᴘᴀᴍꜱ ʜᴀɴɢɪɴɢ ᴍᴇꜱꜱᴀɢᴇ ꜰᴏʀ ɢɪᴠᴇɴ ᴄᴏᴜɴᴛᴇʀ.**
+  1) {hl}hang <counter>
 
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ᴘꜱᴘᴀᴍ (ᴄᴏᴜɴᴛꜱ)
 
- ˣ ꜱᴘᴀᴍ ᴛʜᴇ ᴄʜᴀᴛ ᴡɪᴛʜ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ɢᴍ (ᴄᴏᴜɴᴛꜱ)
-🔸 {hl}ɢᴍ (ᴄᴏᴜɴᴛꜱ) (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ɢᴍ -ᴜ
-🔸 {hl}ɢᴍ -ᴜ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
- ˣ ꜱᴘᴀᴍ ᴛʜᴇ ᴄʜᴀᴛ ᴡɪᴛʜ ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ɢᴀ (ᴄᴏᴜɴᴛꜱ) (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ɢᴀ -ᴜ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ
-
- ˣ ꜱᴘᴀᴍ ᴛʜᴇ ᴄʜᴀᴛ ᴡɪᴛʜ ɢᴏᴏᴅ ɴɪɢʜᴛ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ɢɴ (ᴄᴏᴜɴᴛꜱ) (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ɢɴ -ᴜ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
- ˣ ꜱᴘᴀᴍ ᴛʜᴇ ᴄʜᴀᴛ ᴡɪᴛʜ ʙᴅᴀʏ ᴍꜱɢꜱ
-
-👨‍💻 ᴜꜱᴀɢᴇ :
-🔸 {hl}ʙꜱᴘᴀᴍ (ᴄᴏᴜɴᴛꜱ) (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-🔸 {hl}ʙꜱᴘᴀᴍ -ᴜ (ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏᴏɴᴇ)
-
-** © @KKEX_XD**
-"""                                
+** © @smaugxd**
+"""                     
+           
            
 @X1.on(events.CallbackQuery(pattern=r"help_back"))
 @X2.on(events.CallbackQuery(pattern=r"help_back"))
@@ -227,16 +133,16 @@ async def helpback(event):
                 Button.inline("• ʀᴀɪᴅ •", data="raid")
               ],
               [
-                Button.inline("• ᴇxᴛʀᴀꜱ •", data="extra"),
-                Button.inline("• ᴏᴡɴᴇʀ •", data="owner")
+                Button.inline("• ᴇxᴛʀᴀ •", data="extra")
               ],
               [
-                Button.url("• ꜱᴜᴘᴘᴏʀᴛ •", "https://t.me/STORM_CHATZ")
+                Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/Bots_x_Hub"),
+                Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/Alice_x_support")
               ]
             ]
           )
     else:
-        await event.answer("ɴᴏᴏʙ ! ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ꜱᴛᴏʀᴍ ꜱᴘᴀᴍ ʙᴏᴛꜱ !! @KKEX_XD", cache_time=0, alert=True)
+        await event.answer("Make Your Own Bots !! @smaugxd", cache_time=0, alert=True)
 
 
 @X1.on(events.CallbackQuery(pattern=r"spam"))
@@ -252,10 +158,10 @@ async def helpback(event):
 async def help_spam(event):
     if event.query.user_id in SUDO_USERS:    
         await event.edit(spam_msg,
-              buttons=[[Button.inline("🔙 ʙᴀᴄᴋ", data="help_back"),],],
+              buttons=[[Button.inline("< Back", data="help_back"),],],
               ) 
     else:
-        await event.answer("ɴᴏᴏʙ ! ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ꜱᴛᴏʀᴍ ꜱᴘᴀᴍ ʙᴏᴛꜱ !! @KKEX_XD", cache_time=0, alert=True)
+        await event.answer("Make Your Own Bots !! @smaugxd", cache_time=0, alert=True)
 
 
 @X1.on(events.CallbackQuery(pattern=r"raid"))
@@ -271,10 +177,10 @@ async def help_spam(event):
 async def help_raid(event):
     if event.query.user_id in SUDO_USERS:
         await event.edit(raid_msg,
-            buttons=[[Button.inline("🔙 ʙᴀᴄᴋ", data="help_back"),],],
+            buttons=[[Button.inline("< Back", data="help_back"),],],
           )
     else:
-        await event.answer("ɴᴏᴏʙ ! ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ꜱᴛᴏʀᴍ ꜱᴘᴀᴍ ʙᴏᴛꜱ !! @KKEX_XD", cache_time=0, alert=True)
+        await event.answer("Make Your Own Bots !! @smaugxd", cache_time=0, alert=True)
 
 
 @X1.on(events.CallbackQuery(pattern=r"extra"))
@@ -290,7 +196,7 @@ async def help_raid(event):
 async def help_extra(event):
     if event.query.user_id in SUDO_USERS:
         await event.edit(extra_msg,
-            buttons=[[Button.inline("🔙 ʙᴀᴄᴋ", data="help_back"),],],
+            buttons=[[Button.inline("< Back", data="help_back"),],],
             )
     else:
-        await event.answer("ɴᴏᴏʙ ! ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ꜱᴛᴏʀᴍ ꜱᴘᴀᴍ ʙᴏᴛꜱ !! @KKEX_XD", cache_time=0, alert=True)
+        await event.answer("Make Your Own Bots !! @smaugxd", cache_time=0, alert=True)
